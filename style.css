@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main img {
+    height: 650px;
+    width: 500px;
+    z-index: 99;
+    position: absolute  ;
+    object-fit: cover;
+}
+
+#scroll-div {
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    /* height: 100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div::-webkit-scrollbar {
+    display: none;
+}
+
+#scroll-div h1 {
+    display: inline-block;
+    letter-spacing: 4px;
+    margin-right: 40px;
+    font-size: 140px;
+    animation-name: scroll-one-three ;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll-div1 {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    /* height: 100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 100;
+}
+
+#scroll-div1::-webkit-scrollbar {
+    display: none;
+}
+
+#scroll-div1 h1 {
+    display: inline-block;
+    letter-spacing: 4px;
+    margin-right: 40px;
+    font-size: 140px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    color: transparent;
+    animation-name: scroll-two;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#scroll-div2 {
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+    /* height: 100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div2::-webkit-scrollbar {
+    display: none;
+}
+
+#scroll-div2 h1 {
+    display: inline-block;
+    letter-spacing: 4px;
+    margin-right: 40px;
+    font-size: 140px;
+    animation-name: scroll-one-three ;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#text {
+    position: absolute;
+    font-size: 30px;
+    width: 60%;
+    color: rgb(0, 0, 0);
+    z-index: 999;
+    text-align: center;
+    text-transform: uppercase;
+    top: 15%;
+    /* background-color: red; */
+}
+
+@keyframes scroll-one-three {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-100% - 40px));
+    }
+}
+
+@keyframes scroll-two {
+    0%{
+        transform: translateX(calc(-100% - 40px));
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
